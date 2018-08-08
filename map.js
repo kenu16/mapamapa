@@ -31,3 +31,20 @@ document.addEventListener("DOMContentLoaded", function(e){
     init();
 
 });
+
+
+function panhome() {
+    view.animate({
+        center:ourLoc,
+        duration: 2000
+    });
+};
+
+function panToLocation() {
+    var countryName = document.getElementById("country-name").value;
+
+    if(countryName ==="" ) {
+        alert("you didn't enter country name!");
+        return;
+    }
+}
