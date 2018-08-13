@@ -46,5 +46,21 @@ function panToLocation() {
     if(countryName ==="" ) {
         alert("you didn't enter country name!");
         return;
+
     }
+    var lon = 0.0;
+    var lat = 0.0;
+    var location = ol.proj.fromLonLat([lon, lat]);
+    
+    //we're accessing a REST API to get the country's 
+    //location data
+    var query = "https://restcountries.eu/rest/v2/name/"+countryName;
+    query = query.replace(/ /g, "%20");
+    alert(query);
+    
+    var country request = new XMLHttpRequest();
+    countryRequest.open('get', query, false);
+    iew.animate({
+        center: location,
+        duration: 2000
 }
